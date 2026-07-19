@@ -3104,26 +3104,7 @@ body:has(.order-modal--visible) #btn-track-live-order { opacity: 0; visibility: 
       }
 
       saveOrderToHistory();
-      dom.orderModal.classList.add('order-modal--fade-out');
-      if (dom.trackBtn) dom.trackBtn.classList.add('track-btn--fade-out');
-      setTimeout(function () {
-        dom.orderModal.classList.remove('order-modal--visible', 'order-modal--fade-out');
-        document.body.style.overflow = '';
-        if (dom.trackBtn) dom.trackBtn.classList.remove('track-btn--fade-out');
-        if (state.pollingTimer) {
-          clearInterval(state.pollingTimer);
-          state.pollingTimer = null;
-        }
-        state.cart = [];
-        updateBottomBar();
-        state.menuItems.forEach(function (item) { updateCardCounter(item.id); });
-        state.orderId = null;
-        state.isOrderPlaced = false;
-        state.parentOrder = null;
-        var newAdditionsEl = document.getElementById('newAdditionsSection');
-        if (newAdditionsEl) { newAdditionsEl.style.display = 'none'; newAdditionsEl.innerHTML = ''; }
-        updateTrackButtonVisibility();
-      }, 400);
+      showSessionWall();
       return;
     }
 

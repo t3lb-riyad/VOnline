@@ -2317,7 +2317,6 @@ tbody tr:hover { background: var(--color-surface-hover); }
         var time = o.created_at ? new Date(o.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '--';
 
         var statuses = ['received', 'preparing', 'ready', 'paid', 'cancelled'];
-        var statusLabels = { 'received': 'Reçue', 'preparing': 'En préparation', 'ready': 'Prête', 'paid': 'Payé', 'cancelled': 'Annulé' };
         var statusBtns = '<div class="status-btns" data-order-id="' + esc(o.order_id) + '">';
         statuses.forEach(function (s) {
           var active = s === o.status ? ' status-btn--active' : '';
