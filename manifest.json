@@ -1,0 +1,28 @@
+{
+  "name": "MITS Admin Dashboard",
+  "short_name": "MITS Admin",
+  "description": "Admin panel for MITS restaurant management",
+  "start_url": "admin.html",
+  "display": "standalone",
+  "background_color": "#0f0f1a",
+  "theme_color": "#0f0f1a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "images/app192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/app512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "images/app512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
