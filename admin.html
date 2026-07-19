@@ -1777,13 +1777,7 @@ tbody tr:hover { background: var(--color-surface-hover); }
     primaryImageFile: null,
   };
 
-  const statusLabels = {
-    'received': 'Reçue',
-    'preparing': 'En Préparation',
-    'ready': 'Prête',
-    'paid': 'Payé',
-    'cancelled': 'Annulé',
-  };
+
 
 
 
@@ -2144,7 +2138,14 @@ tbody tr:hover { background: var(--color-surface-hover); }
     });
   }
 
-  
+  const statusLabels = {
+    'received': 'Reçue',
+    'preparing': 'En Préparation',
+    'ready': 'Prête',
+    'paid': 'Payé',
+    'cancelled': 'Annulé',
+  };
+
   function updateOrderStatus(orderId, newStatus) {
     state.statusUpdating = true;
 
